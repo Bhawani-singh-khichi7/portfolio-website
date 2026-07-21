@@ -378,6 +378,57 @@ ul { list-style: none; }
 
 /* ===== Mobile ===== */
 @media (max-width: 720px) {
+  /* ===== PORTFOLIO V2 UPGRADE ===== */
+
+.hero{
+    position: relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:linear-gradient(135deg,#3b82f6,#22d3ee);
+    filter:blur(140px);
+    opacity:.18;
+    top:-120px;
+    right:-80px;
+    pointer-events:none;
+}
+
+.skill-card,
+.project-card,
+.contact-card{
+    backdrop-filter:blur(16px);
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+    transition:.35s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 20px 45px rgba(59,130,246,.25);
+}
+
+.btn{
+    box-shadow:0 10px 30px rgba(59,130,246,.25);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.section-title{
+    background:linear-gradient(90deg,#fff,#60a5fa,#22d3ee);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.footer{
+    border-top:1px solid var(--border);
+}
   .nav-links {
     position: absolute;
     top: 100%;
@@ -398,4 +449,38 @@ ul { list-style: none; }
 
   .hero { padding: 64px 20px 56px; }
   .section { padding: 64px 20px; }
-      }
+ // ===== Portfolio V2 Upgrade =====
+
+// Smooth button animation
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("mouseenter", () => {
+    btn.style.transform = "translateY(-4px) scale(1.03)";
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.style.transform = "translateY(0) scale(1)";
+  });
+});
+
+// Active navbar link on scroll
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  document.querySelectorAll("section").forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach(link => {
+    link.style.color = "";
+
+    if (link.getAttribute("href") === "#" + current) {
+      link.style.color = "#22d3ee";
+    }
+  });
+});
