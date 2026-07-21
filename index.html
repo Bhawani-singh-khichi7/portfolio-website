@@ -1,150 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhawani Singh Khichi — Full-Stack Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<title>Bhawani Singh Khichi | Full Stack Developer</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
+
+
 <body>
 
+
+<!-- NAVBAR -->
+
 <nav class="nav">
-  <div class="nav-inner">
-    <span class="nav-logo">BSK<span class="dot">.</span></span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+
+<div class="nav-inner">
+
+<div class="nav-logo">
+Bhawani<span>.</span>
+</div>
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+
+<button class="nav-toggle">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+
+</div>
+
 </nav>
 
+
+
+<!-- HERO SECTION -->
+
+
 <header class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Jodhpur, Rajasthan</p>
-    <h1>Bhawani Singh<br>Khichi</h1>
-    <p class="hero-sub">Aspiring Full-Stack Developer</p>
 
-    <div class="terminal" id="terminal">
-      <div class="terminal-bar">
-        <span class="tdot red"></span><span class="tdot yellow"></span><span class="tdot green"></span>
-        <span class="terminal-title">whoami.sh</span>
-      </div>
-      <div class="terminal-body">
-        <p><span class="prompt">$</span> <span id="typedLine"></span><span class="cursor">▊</span></p>
-      </div>
-    </div>
 
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
-    </div>
-  </div>
+<div class="hero-inner">
+
+
+<p class="eyebrow">
+JODHPUR, RAJASTHAN • DEVELOPER JOURNEY
+</p>
+
+
+
+<h1>
+
+Bhawani Singh<br>
+
+<span>Khichi</span>
+
+</h1>
+
+
+
+<p class="hero-sub">
+
+Aspiring Full-Stack Developer building modern websites
+with HTML, CSS, JavaScript and Python.
+Currently learning, creating and improving every day.
+
+</p>
+
+
+
+<div class="hero-cta">
+
+
+<a href="projects.html" class="btn btn-primary">
+
+View Projects
+
+</a>
+
+
+<a href="#contact" class="btn btn-outline">
+
+Get In Touch
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
 </header>
+  <!-- ABOUT SECTION -->
 
-<main>
+<section class="section" id="about">
 
-  <section id="about" class="section">
-    <p class="section-label">01 — About</p>
-    <h2 class="section-title">Building things, one commit at a time.</h2>
-    <p class="section-text">
-      I'm Bhawani, a self-taught developer from Rajasthan currently learning
-      HTML, CSS, JavaScript, Python, and version control with Git &amp; GitHub.
-      I build in public, ship small projects often, and treat every bug as
-      part of the process. My goal is to grow into a confident full-stack
-      developer — one skill, one project, one day at a time.
-    </p>
-  </section>
+<p class="section-label">
+01 — ABOUT ME
+</p>
 
-  <section id="skills" class="section">
-    <p class="section-label">02 — Skills</p>
-    <h2 class="section-title">Current stack</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <span class="skill-tag">core</span>
-        <h3>HTML</h3>
-        <p>Semantic structure &amp; accessible markup</p>
-      </div>
-      <div class="skill-card">
-        <span class="skill-tag">core</span>
-        <h3>CSS</h3>
-        <p>Responsive layouts, Flexbox &amp; Grid</p>
-      </div>
-      <div class="skill-card">
-        <span class="skill-tag">learning</span>
-        <h3>JavaScript</h3>
-        <p>DOM manipulation &amp; interactivity</p>
-      </div>
-      <div class="skill-card">
-        <span class="skill-tag">learning</span>
-        <h3>Python</h3>
-        <p>Scripting &amp; problem solving</p>
-      </div>
-      <div class="skill-card">
-        <span class="skill-tag">tooling</span>
-        <h3>Git &amp; GitHub</h3>
-        <p>Version control &amp; deployment</p>
-      </div>
-    </div>
-  </section>
 
-  <section id="projects" class="section">
-    <p class="section-label">03 — Projects</p>
-    <h2 class="section-title">Selected work</h2>
-    <div class="projects-grid">
-      <article class="project-card">
-        <div class="project-top">
-          <span class="project-status">live</span>
-        </div>
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio built from scratch with HTML, CSS &amp; JavaScript, deployed with GitHub Pages.</p>
-        <div class="project-tags">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span>
-        </div>
-        <a href="https://bhawani-singh-khichi7.github.io/portfolio-website/" target="_blank" rel="noopener" class="project-link">Visit site →</a>
-      </article>
+<h2 class="section-title">
+Building skills one project at a time.
+</h2>
 
-      <article class="project-card project-card-empty">
-        <div class="project-top">
-          <span class="project-status pending">in progress</span>
-        </div>
-        <h3>Next Build</h3>
-        <p>A new project is currently in the works. Check back soon for updates.</p>
-      </article>
-    </div>
-  </section>
 
-  <section id="contact" class="section">
-    <p class="section-label">04 — Contact</p>
-    <h2 class="section-title">Let's connect</h2>
-    <p class="section-text">
-      Open to feedback, collaboration, or just a conversation about code.
-      Reach out through either of these:
-    </p>
-    <div class="contact-links">
-      <a href="mailto:sksstatusmorden@gmail.com" class="contact-card">
-        <span class="contact-label">Email</span>
-        <span class="contact-value">sksstatusmorden@gmail.com</span>
-      </a>
-      <a href="https://github.com/Bhawani-singh-khichi7" target="_blank" rel="noopener" class="contact-card">
-        <span class="contact-label">GitHub</span>
-        <span class="contact-value">@Bhawani-singh-khichi7</span>
-      </a>
-    </div>
-  </section>
+<p class="section-text">
 
-</main>
+I'm Bhawani Singh Khichi, an aspiring Full-Stack Developer
+from Rajasthan. I am learning web development and building
+projects to improve my coding skills.
+
+I believe in learning by creating real-world applications
+and continuously improving my knowledge.
+
+</p>
+
+</section>
+
+
+
+
+
+<!-- SKILLS SECTION -->
+
+
+<section class="section" id="skills">
+
+
+<p class="section-label">
+02 — SKILLS
+</p>
+
+
+<h2 class="section-title">
+My Current Tech Stack
+</h2>
+
+
+
+<div class="skills-grid">
+
+
+
+<div class="skill-card">
+
+<h3>HTML</h3>
+
+<p>
+Creating clean and structured web pages.
+</p>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<h3>CSS</h3>
+
+<p>
+Designing responsive and modern interfaces.
+</p>
+
+</div>
+
+
+
+
+<div class="skill-card">
+
+<h3>JavaScript</h3>
+
+<p>
+Adding interaction and dynamic features.
+</p>
+
+</div>
+
+
+
+
+<div class="skill-card">
+
+<h3>Python</h3>
+
+<p>
+Learning programming and problem solving.
+</p>
+
+</div>
+
+
+
+
+<div class="skill-card">
+
+<h3>Git & GitHub</h3>
+
+<p>
+Managing projects and deploying websites.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+  <!-- PROJECTS SECTION -->
+
+<section class="section" id="projects">
+
+<p class="section-label">
+03 — PROJECTS
+</p>
+
+
+<h2 class="section-title">
+Featured Work
+</h2>
+
+
+
+<div class="projects-grid">
+
+
+
+<div class="project-card">
+
+<h3>
+Portfolio Website
+</h3>
+
+
+<p>
+A modern personal portfolio website built using
+HTML, CSS and JavaScript with responsive design.
+</p>
+
+
+<a class="project-link" href="#">
+View Project →
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="project-card">
+
+<h3>
+Next Project
+</h3>
+
+
+<p>
+Currently working on new projects to improve
+development skills and create useful applications.
+</p>
+
+
+<a class="project-link" href="#">
+Coming Soon →
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CONTACT SECTION -->
+
+
+<section class="section" id="contact">
+
+
+<p class="section-label">
+04 — CONTACT
+</p>
+
+
+<h2 class="section-title">
+Let's Connect
+</h2>
+
+
+<p class="section-text">
+
+Open for feedback, collaboration and discussions
+about technology and development.
+
+</p>
+
+
+
+
+<div class="contact-links">
+
+
+<a class="contact-card" href="mailto:sksstatusmorden@gmail.com">
+
+<h3>Email</h3>
+
+<p>
+sksstatusmorden@gmail.com
+</p>
+
+</a>
+
+
+
+<a class="contact-card" href="https://github.com/Bhawani-singh-khichi7">
+
+<h3>GitHub</h3>
+
+<p>
+@Bhawani-singh-khichi7
+</p>
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+
 
 <footer class="footer">
-  <p>Designed &amp; built by Bhawani Singh Khichi</p>
+
+<p>
+Designed & Built by Bhawani Singh Khichi © <span id="year"></span>
+</p>
+
+
 </footer>
 
+
+
+
 <script src="script.js"></script>
+
+
 </body>
-        </html>
+
+  </html>
