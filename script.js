@@ -1,50 +1,132 @@
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.querySelector('.nav-links');
+/// ===============================
+// PORTFOLIO V2 SCRIPT
+// ===============================
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+// Mobile Menu
 
-// Terminal typing effect
-const typedLine = document.getElementById('typedLine');
-const message = "Full-stack developer in progress. Learning HTML, CSS, JS & Python.";
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if(navToggle && navLinks){
+
+    navToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link=>{
+
+        link.addEventListener("click",()=>{
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+
+
+// Typing Animation
+
+const typedLine = document.getElementById("typedLine");
+
+const message =
+"Building modern websites with HTML, CSS, JavaScript & Python.";
+
 let i = 0;
 
-function typeWriter() {
-  if (i < message.length) {
-    typedLine.textContent += message.charAt(i);
-    i++;
-    setTimeout(typeWriter, 35);
-  }
-}
 
-// Respect reduced motion preference
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (prefersReducedMotion) {
-  typedLine.textContent = message;
-} else {
-  window.addEventListener('load', typeWriter);
-}
+function typeEffect(){
 
-// Fade-in sections on scroll
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+    if(typedLine && i < message.length){
+
+        typedLine.textContent += message.charAt(i);
+
+        i++;
+
+        setTimeout(typeEffect,45);
+
     }
-  });
-}, { threshold: 0.15 });
 
-sections.forEach(section => {
-  section.style.opacity = '0';
-  section.style.transform = 'translateY(24px)';
-  section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(section);
+}
+
+
+window.addEventListener("load",()=>{
+
+    typeEffect();
+
 });
+
+
+
+
+// Scroll Reveal Animation
+
+const revealElements = document.querySelectorAll(
+".skill-card, .project-card, .contact-card, .section"
+);
+
+
+const revealObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+
+},{threshold:0.15});
+
+
+
+revealElements.forEach(element=>{
+
+    element.classList.add("hidden");
+
+    revealObserver.observe(element);
+
+});
+
+
+
+
+// Navbar shadow on scroll
+
+const nav = document.querySelector(".nav");
+
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 50){
+
+        nav.style.background="rgba(7,11,23,.95)";
+
+    }else{
+
+        nav.style.background="rgba(7,11,23,.75)";
+
+    }
+
+});
+
+
+
+// Footer Year
+
+const year = document.getElementById("year");
+
+if(year){
+
+    year.textContent = new Date().getFullYear();
+
+}
